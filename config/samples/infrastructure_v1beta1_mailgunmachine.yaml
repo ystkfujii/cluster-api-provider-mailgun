@@ -1,0 +1,12 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: MailgunMachine
+metadata:
+  labels:
+    app.kubernetes.io/name: mailgunmachine
+    app.kubernetes.io/instance: mailgunmachine-sample
+    app.kubernetes.io/part-of: cluster-api-provider-mailgun
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: cluster-api-provider-mailgun
+  name: mailgunmachine-sample
+spec:
+  # TODO(user): Add fields here
