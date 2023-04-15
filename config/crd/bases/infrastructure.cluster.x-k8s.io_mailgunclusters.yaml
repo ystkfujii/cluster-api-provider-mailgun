@@ -35,13 +35,29 @@ spec:
           spec:
             description: MailgunClusterSpec defines the desired state of MailgunCluster
             properties:
-              foo:
-                description: Foo is an example field of MailgunCluster. Edit mailguncluster_types.go
-                  to remove/update
+              priority:
+                description: Priority is how quickly you need this cluster
                 type: string
+              request:
+                description: Request is where you ask extra nicely
+                type: string
+              requester:
+                description: Requester is the email of the person sending the request
+                type: string
+            required:
+            - priority
+            - request
+            - requester
             type: object
           status:
             description: MailgunClusterStatus defines the observed state of MailgunCluster
+            properties:
+              response:
+                description: MessageID is set to the message ID from Mailgun when
+                  our message has been sent
+                type: string
+            required:
+            - response
             type: object
         type: object
     served: true
